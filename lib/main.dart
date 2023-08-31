@@ -13,7 +13,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MarkDownPage(mdName: 'guide.md'),
+      home: MarkDownPage(
+        mdName: 'guide.md',
+        style: MarkdownStyleSheet(
+          h1: const TextStyle(
+            fontSize: 35,
+            fontWeight: FontWeight.bold,
+          ),
+          h2: const TextStyle(
+            fontSize: 28,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
     );
   }
 }
