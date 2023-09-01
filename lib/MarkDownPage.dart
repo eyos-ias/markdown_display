@@ -23,7 +23,19 @@ class MarkDownPage extends StatelessWidget {
                 styleSheet: style,
               );
             }
-            return Markdown(data: snapshot.data!);
+            return Markdown(
+              data: snapshot.data!,
+              styleSheet: MarkdownStyleSheet(
+                h1: const TextStyle(
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                ),
+                h2: const TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            );
           }
 
           return const Center(
